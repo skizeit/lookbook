@@ -14,7 +14,7 @@
   </td>
   <td class="param-description <%= "param-description-empty" unless param.description %>">
     <% if param.description %>
-      <p class="opacity-70"><%= param.description %></p>
+      <p class="opacity-70"><%= ::Lookbook::MarkdownRenderer.call(param.description) %></p>
     <% else %>
       <p class="italic opacity-40">&mdash;</p>
     <% end %>
